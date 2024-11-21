@@ -1,0 +1,216 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'ANTON';
+}
+
+a {
+    text-decoration: none;
+    color: #ffffff;
+}
+.containerpri {
+    background: #181818;
+    width: 70%;
+    padding: 10px;
+    margin: 20px auto;
+    border-radius: 20px;
+    border-width:2px;
+    border-style:solid;
+    border-color: #2d2d2d;
+    
+    
+    
+}
+.contenedor {
+    width: 100%;
+    min-height: 100vh;
+    margin: 0 auto;
+    display: grid;
+    background-color: #000000;
+    grid-template-columns: minmax(30px, 30px) auto;
+    grid-template-rows: 60px auto;
+    grid-template-areas: "header header" "menu contenido";
+    transition: all .3s ease;
+}
+
+.contenedor.active {
+    grid-template-columns: minmax(300px, 18%) auto;
+}
+
+
+/* ---- ---- ---- HEADER ---- ---- ---- */
+
+.header {
+    grid-area: header;
+    padding: 0 20px;
+    display: grid;
+    grid-template-columns: auto 1fr auto;
+    align-items: center;
+    justify-content: space-between;
+    grid-gap: 20px;
+    font-size: 30PX;
+    color: #ffffff;
+    grid-template-areas: "logo busqueda iconos";
+  
+    }
+.header a {
+        text-decoration: none;
+        font-size: 24px;
+        color: rgb(255, 255, 255);
+        display: inline-flex; /* Para alinear correctamente los íconos */
+        justify-content: center;
+        align-items: center;
+        width: 40px; /* Asegura un ancho constante */
+        height: 40px; /* Asegura un alto constante */
+        
+    }
+
+
+.header a .fa-lock-open,
+.header a .fa-lock {
+        position: absolute; /* Superpone los íconos */
+        transition: opacity 0.3s ease;
+    }
+
+.header a .fa-lock-open {
+        opacity: 0; /* Inicialmente oculto */
+    }
+
+.header a:hover .fa-lock{
+        opacity: 0; /* Oculta el ícono de candado abierto */
+    }
+
+.header a:hover .fa-lock-open{
+        opacity: 1; /* Muestra el ícono de candado cerrado */
+    }
+
+    .icon-container {
+        position: relative;
+        display: inline-block;
+    }
+
+
+.header .contenedor-logo {
+    grid-area: logo;
+    display: flex;
+    align-items: center;
+}
+
+.header .contenedor-logo .boton-menu {
+    border: none;
+    padding: 10px;
+    background: none;
+    cursor: pointer;
+    font-size: 28px;
+    border-radius: 100px;
+    width: 50px;
+    height: 50px;
+    margin-right: 20px;
+}
+
+.header .contenedor-logo .boton-menu:hover {
+    background: #ffffff;
+}
+
+.header .contenedor-logo .logo .fas {
+    background: #272727;
+    padding: 7px 12px;
+    border-radius: 4px;
+    font-size: 8px;
+    color: #ffffff;
+    position: relative;
+    top: -4px;
+    margin-right: 4px;
+}
+
+.header .contenedor-logo .logo {
+    font-family: 'ANTON', serif;
+    font-size: 30px;
+    color: #fff;
+    position: relative;
+    top: 2px;
+}
+
+
+
+
+
+
+.header .botones-header {
+    grid-area: iconos;
+    display: flex;
+    align-items: center;
+}
+
+.header .botones-header button {
+    background: none;
+    border: none;
+    width: 40px;
+    height: 40px;
+    font-size: 18px;
+    padding: 7px 12px;
+    border-radius: 100px;
+    color: #ffffff;
+    margin-right: 20px;
+    cursor: pointer;
+}
+
+.header .botones-header button:hover {
+    background: #535151;
+}
+
+.header .botones-header .avatar {
+    width: 30px;
+    height: 30px;
+    display: inline-block;
+}
+
+.header .botones-header .avatar img {
+    vertical-align: top;
+    width: 100%;
+    border-radius: 100px;
+}
+
+
+/* ---- ---- ---- Menu Lateral ---- ---- ---- */
+
+.menu-lateral {
+    grid-area: menu;
+    background: #000000;
+    overflow: hidden;
+    font-size: 30px;
+}
+
+.menu-lateral a {
+    display: block;
+    padding: 65px 35px;
+    color: #575555;
+    min-width: 1000px;
+}
+
+.menu-lateral a:hover {
+    
+    color: white;
+}
+
+
+
+
+
+
+/* ---- ---- ---- Contenido Principal ---- ---- ---- */
+
+.main {
+    grid-area: contenido;
+    background: #000000;
+    padding: 40px;
+}
+
+.main .titulo {
+    margin-bottom: 20px;
+    color: white;
+}
