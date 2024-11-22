@@ -19,9 +19,12 @@ include("connect.php");
     <div class="contenedor active" id="contenedor">
         <header class="header">
             <div class="contenedor-logo">
-               
-                <a href="#" class="logo"><i class="fa-solid fa-lock"></i> <span>CENTAUROS</span></a>
+            <a href="principal.php">
+        <i class="fa-solid fa-lock-open"></i>
+        <i class="fa-solid fa-lock"></i> </a>
+        <H5>CENTAUROS</H5>
             </div>
+            
             <div class="botones-header">
                 <button><i class="fas fa-user"></i></button>
                 <a href="#" class="avatar"><img src="img/avatar.jpg" alt=""></a>
@@ -29,9 +32,9 @@ include("connect.php");
         </header>
 
         <nav class="menu-lateral">
-            <a href="#" class="active"><i class="fas fa-home"></i> </a>
+            <a href="principal.php" class="active"><i class="fas fa-home"></i> </a>
             <a href="#"><i class="fa-solid fa-money-check-dollar"></i> </a>
-            <a href="#"><i class="fa-solid fa-clock-rotate-left"></i></a>
+            <a href="historial.php"><i class="fa-solid fa-clock-rotate-left"></i></a>
         </nav>
         
 <div class="containerpri" id="containerpri">
