@@ -2,20 +2,14 @@
 
 include 'connect.php';
 
-if(isset($_POST['signUp'])){
-    $nombre=$_POST['nombre'];
-    $apellido=$_POST['apellido'];
-    $documento=$_POST['documento'];
-    $email=$_POST['email'];
-    $password=$_POST['password'];
-    $password=md5($password);
-
+     
+     
      $checkdocumento="SELECT * From login where documento='$documento'";
-     $result=$conn->query($checkdocumento);
-     if($result->num_rows>0){
+     $result2=$conn->query($checkdocumento);
+     if($result2->num_rows>0){
         echo header ("location: login-fail-cuenta-existente.php");;
-     }
-     else{
+     } 
+        else{
         $insertQuery="INSERT INTO login (nombre,apellido,documento,email,password)
                        VALUES ('$nombre','$apellido','$documento','$email','$password')";
             if($conn->query($insertQuery)==TRUE){
@@ -25,8 +19,6 @@ if(isset($_POST['signUp'])){
                 echo "Error:".$conn->error;
             }
      }
-   
-}
 
 if(isset($_POST['signIn'])){
    $documento=$_POST['documento'];
@@ -45,6 +37,7 @@ if(isset($_POST['signIn'])){
    else{
     echo header("Location: login-fail.php");;
    }
+
 
 }
 ?>

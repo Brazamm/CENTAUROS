@@ -12,10 +12,10 @@
     
 
     <div class="container" id="signIn">
-        <h1 class="form-title">Error al iniciar sesion</h1>
+        <h1 class="form-title">Error al iniciar sesión</h1>
         
-      <div class="container" id="signup" style="display:none;">
-      <h1 class="form-title">Error al registrar</h1>
+        <div class="container" id="signup" style="display:none;">
+        <h1 class="form-title">Error al iniciar sesión</h1>
     
         
        <input type="submit" class="button" value="" name="signUp">
@@ -23,14 +23,15 @@
      
       <div class="links">
         <p>¿Ya tienes cuenta?</p>
-        <button id="signInButton">Iniciar sesión</button>
+        <button id="signInButton">Intentar nuevamente</button>
       </div>
     </div>
           <p class="recover">
-            <a href="#">El usuario o la contraseña es incorrecto </a>
+            <a href="#">El documento o la contraseña es incorrecto </a>
           </p>
+          
           <a href="login.php">
-         <input  type="submit" class="button" value="Intentar de nuevo" name="signIn" ></a>
+         <input  id="signUpButton" type="submit" class="button" value="Intentar de nuevo" name="signUpButton" ></a>
         </form>
         </div>
         
@@ -106,7 +107,7 @@
         }
      
     </script>
-    <script src="animaciones2.js"></script>
+    <script src="login-fail-cuenta-existente.js"></script>
       <script src="animaciones.js"></script>
 </body>
 </html>

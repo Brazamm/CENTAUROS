@@ -6,71 +6,36 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Register & Login</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-    <link rel="stylesheet" href="estilo copy.css">
+    <link rel="stylesheet" href="estilo copy 2.css">
 </head>
 <body>
+    
 
-         
-    <div class="container" id="signup" style="display:none;">
-      <h1 class="form-title">Registrar</h1>
-      <form method="post" action="register.php">
-        <div class="input-group">
-           <i class="fas fa-user"></i>
-           <input type="text" name="nombre" id="nombre" placeholder="nombre" required>
-           <label for="nombre">Nombre</label>
-        </div>
-        <div class="input-group">
-            <i class="fas fa-user"></i>
-            <input type="text" name="apellido" id="apellido" placeholder="apellido" required>
-            <label for="apellido">Apellido</label>
-        </div>
-        <div class="input-group">
-            <i class="fas fa-user"></i>
-            <input type="documento" name="documento" id="documento" placeholder="documento" required>
-            <label for="documento">Documento</label>
-        </div>
-        <div class="input-group">
-            <i class="fas fa-envelope"></i>
-            <input type="email" name="email" id="email" placeholder="Email" required>
-            <label for="email">Email</label>
-        </div>
-        <div class="input-group">
-            <i class="fas fa-lock"></i>
-            <input type="password" name="password" id="password" placeholder="Password" minlength="8" required>
-            <label for="password">Contraseña</label>
-        </div>
-       <input type="submit" class="button" value="Registrarse" name="signUp">
+    <div class="container" id="signIn">
+        <h1 class="form-title">Error al crear cuenta</h1>
+        
+      <div class="container" id="signup" style="display:none;">
+      <h1 class="form-title">Error al registrar</h1>
+    
+        
+       <input type="submit" class="button" value="" name="signUp">
       </form>
-      
+     
       <div class="links">
         <p>¿Ya tienes cuenta?</p>
         <button id="signInButton">Iniciar sesión</button>
       </div>
     </div>
-
-    <div class="container" id="signIn">
-        <h1 class="form-title">Iniciar sesión</h1>
-        <form method="post" action="register.php">
-          <div class="input-group">
-              <i class="fas fa-envelope"></i>
-              <input type="documento" name="documento" id="documento" placeholder="documento" required>
-              <label for="documento">Documento</label>
-          </div>
-          <div class="input-group">
-              <i class="fas fa-lock"></i>
-              <input type="password" name="password" id="password" placeholder="Password" required>
-              <label for="password">Contraseña</label>
-          </div>
-         
-         <input type="submit" class="button" value="Iniciar sesión" name="signIn">
+          <p class="recover">
+            <a href="#">El Email ya se asigno a otra cuenta </a>
+          </p>
+          
+          <a href="login.php">
+         <input  id="signUpButton" type="submit" class="button" value="Intentar de nuevo" name="signUpButton" ></a>
         </form>
-       
-       
-        <div class="links">
-        
-          <button id="signUpButton">Registrarse</button>
         </div>
-      </div>
+        
+       
 
     <canvas id="neuro"></canvas>
     
@@ -142,7 +107,7 @@
         }
      
     </script>
-    <script src="animaciones2.js"></script>
+    <script src="login-fail-cuenta-existente.js"></script>
       <script src="animaciones.js"></script>
 </body>
 </html>
